@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+html {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#app {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#app-bar {
+    color: aquamarine;
+    background: linear-gradient(
+        27deg,
+        rgba(2,0,36,1) 0%,
+        rgba(9,9,121,1) 31%,
+        rgba(7,43,144,1) 57%,
+        rgba(0,212,255,1) 100%
+    );
+    padding: 3pt;
 }
 
-.App-link {
-  color: #61dafb;
+#main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#form {
+    margin-top: 10px;
+    display: block;
+}
+
+.form-field {
+    display: block;
+    width: 200pt;
+    height: 30px;
+    text-align: center;
+    padding: 0px;
+    margin: 15px 0px 0px 0px;
+    box-sizing: border-box;
+}
+
+.form-field:focus {
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 9pt;
+    width: 200pt;
+    display: block;
+}
+
+th, td {
+    display: inline-block;
+    width: 100pt;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
